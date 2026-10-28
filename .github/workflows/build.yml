@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Clean up workspace and cache
+      - name: Clean up workspace and old cache
         run: |
-          rm -rf .buildozer bin/ .plat
+          rm -rf .buildozer bin/ .plat ~/.buildozer
 
       - name: Build with Buildozer
         run: |
