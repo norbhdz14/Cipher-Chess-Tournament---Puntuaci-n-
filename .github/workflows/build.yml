@@ -14,14 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Clean up workspace
+        run: |
+          rm -rf .buildozer bin/
+
       - name: Build with Buildozer
         run: |
-          yes | buildozer -v android debug || (
-            echo "=== EL BUILD FALLÓ. BUSCANDO REGISTROS ==="
-            find . -name "*.log" -exec cat {} + || true
-            find /github/home/.buildozer -name "*.log" -exec tail -n 200 {} + || true
-            exit 1
-          )
+          yes | buildozer -v android debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
