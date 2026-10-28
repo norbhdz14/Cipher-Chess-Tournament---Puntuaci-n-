@@ -22,6 +22,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Clean previous build artifacts
+        run: |
+          rm -rf .buildozer bin/
+
       - name: Install dependencies
         run: |
           sudo apt-get update
