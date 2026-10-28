@@ -7,55 +7,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    container:
+      image: kivy/buildozer:latest
+      options: --user root
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Set up Java JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Clean previous build artifacts
-        run: |
-          rm -rf .buildozer bin/
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-              build-essential \
-              git \
-              python3-pip \
-              autoconf \
-              libtool \
-              pkg-config \
-              zlib1g-dev \
-              libncurses5-dev \
-              libncursesw5-dev \
-              libsqlite3-dev \
-              libssl-dev \
-              libffi-dev \
-              liblzma-dev \
-              unzip \
-              zip \
-              lzip
-
-      - name: Install Buildozer and Cython
-        run: |
-          pip install --upgrade pip
-          pip install --upgrade "cython<3.0.0" buildozer
-
       - name: Build with Buildozer
-        env:
-          ANDROID_NDK_HOME: ""
-          ANDROID_NDK_ROOT: ""
         run: |
           buildozer -v android debug
 
