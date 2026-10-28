@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-22.04
     container:
       image: kivy/buildozer:latest
-      options: --user root
 
     steps:
       - uses: actions/checkout@v4
@@ -20,7 +19,6 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          export HOME=/tmp
           yes | buildozer -v android debug
 
       - name: Upload APK Artifact
