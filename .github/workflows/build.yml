@@ -40,7 +40,8 @@ jobs:
               libffi-dev \
               liblzma-dev \
               unzip \
-              zip
+              zip \
+              lzip
 
       - name: Install Buildozer and Cython
         run: |
@@ -53,6 +54,15 @@ jobs:
           ANDROID_NDK_ROOT: ""
         run: |
           buildozer -v android debug
+
+      - name: Show Buildozer Log on Failure
+        if: failure()
+        run: |
+          echo "=== MOSTRANDO LOG DE ERROR DE BUILDOZER ==="
+          find . -name "build.log" -exec cat {} +
+          if [ -d ".buildozer/logs" ]; then
+            cat .buildozer/logs/*.txt
+          fi
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
