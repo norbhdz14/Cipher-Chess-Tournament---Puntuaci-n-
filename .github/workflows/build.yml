@@ -32,7 +32,8 @@ jobs:
               libsqlite3-dev \
               libssl-dev \
               libffi-dev \
-              liblzma-dev
+              liblzma-dev \
+              unzip
 
       - name: Install Buildozer and Cython
         run: |
