@@ -19,6 +19,7 @@ jobs:
 
       - name: Build with Buildozer
         run: |
+          export MAKEFLAGS="-j2"
           yes | buildozer -v android debug
 
       - name: Upload APK Artifact
