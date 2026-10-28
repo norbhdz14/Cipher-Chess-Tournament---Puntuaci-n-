@@ -55,14 +55,15 @@ jobs:
         run: |
           buildozer -v android debug
 
-      - name: Show Buildozer Log on Failure
+      - name: Show Full Buildozer Logs on Failure
         if: failure()
         run: |
-          echo "=== MOSTRANDO LOG DE ERROR DE BUILDOZER ==="
-          find . -name "build.log" -exec cat {} +
-          if [ -d ".buildozer/logs" ]; then
-            cat .buildozer/logs/*.txt
-          fi
+          echo "=== BUSCANDO ARCHIVOS DE LOG ==="
+          find . -name "*.log"
+          echo "=== CONTENIDO DE LOGS ENCONTRADOS ==="
+          find . -name "*.log" -exec cat {} +
+          echo "=== ULTIMAS LINEAS DE .buildozer ==="
+          tail -n 100 .buildozer/*.log || true
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
