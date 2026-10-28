@@ -16,7 +16,12 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          yes | buildozer -v android debug
+          yes | buildozer -v android debug || (
+            echo "=== EL BUILD FALLÓ. BUSCANDO REGISTROS ==="
+            find . -name "*.log" -exec cat {} + || true
+            find /github/home/.buildozer -name "*.log" -exec tail -n 200 {} + || true
+            exit 1
+          )
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
