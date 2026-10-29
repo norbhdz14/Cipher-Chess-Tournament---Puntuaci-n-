@@ -1,28 +1,43 @@
 Categories:
-- Sports
-- Games
+  - Sports
+  - Games
+License: MIT
+AuthorName: Ing. Norberto Hernández
+WebSite: https://norbhdz.blogspot.com
+SourceCode: https://github.com/norbhdz14/Cipher-Chess-Tournament---Puntuaci-n-
+IssueTracker: https://github.com/norbhdz14/Cipher-Chess-Tournament---Puntuaci-n-/issues
+Donate: https://paypal.me/norbhdz14
 
-License:
-MIT
+AutoName: Cipher Chess Tournament
+Summary: Chess tournament manager with Swiss system and chess clock
+Description: |-
+  Cipher Chess Tournament is a native Android application designed for
+  comprehensive chess tournament management using the Swiss system, dynamic
+  pairings, automatic tie-breaks (Buchholz, Sonneborn-Berger), and an
+  integrated digital chess clock with standard time controls (Fischer increment).
 
-Web Site:
-https://github.com/Norbhdz14/cipher-chess-tournament
+  Features:
+  * Automated Swiss system pairings and bye management.
+  * Instant tie-break calculations.
+  * Built-in two-sided chess clock synchronized with monotonic time.
+  * Dark and light themes with English and Spanish language support.
+  * Data export to TXT and CSV formats.
 
-Source Code:
-https://github.com/Norbhdz14/cipher-chess-tournament
+RepoType: git
+Repo: https://github.com/norbhdz14/Cipher-Chess-Tournament---Puntuaci-n-.git
 
-Issue Tracker:
-https://github.com/Norbhdz14/cipher-chess-tournament/issues
+Builds:
+  - versionName: 1.0.0
+    versionCode: 10000
+    commit: main
+    subdir: .
+    sudo:
+      - apt-get update
+      - apt-get install -y python3-pip openjdk-17-jdk
+    build:
+      - pip3 install buildozer
+      - yes | buildozer -v android debug
 
-Summary:
-Chess tournament manager with Swiss system and chess clock
-
-Description:
-Cipher Chess Tournament is a native Android application designed for comprehensive chess tournament management using the Swiss system, dynamic pairings, automatic tie-breaks (Buchholz, Sonneborn-Berger), and an integrated digital chess clock with standard time controls (Fischer increment).
-
-Features:
-* Automated Swiss system pairings and bye management.
-* Instant tie-break calculations.
-* Built-in two-sided chess clock synchronized with monotonic time.
-* Dark and light themes with English and Spanish language support.
-* Data export to TXT and CSV formats.
+ArchivePolicy: 03 versions
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
