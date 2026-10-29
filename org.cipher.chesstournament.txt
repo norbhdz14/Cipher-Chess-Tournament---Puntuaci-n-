@@ -1,0 +1,28 @@
+Categories:
+- Sports
+- Games
+
+License:
+MIT
+
+Web Site:
+https://github.com/Norbhdz14/cipher-chess-tournament
+
+Source Code:
+https://github.com/Norbhdz14/cipher-chess-tournament
+
+Issue Tracker:
+https://github.com/Norbhdz14/cipher-chess-tournament/issues
+
+Summary:
+Chess tournament manager with Swiss system and chess clock
+
+Description:
+Cipher Chess Tournament is a native Android application designed for comprehensive chess tournament management using the Swiss system, dynamic pairings, automatic tie-breaks (Buchholz, Sonneborn-Berger), and an integrated digital chess clock with standard time controls (Fischer increment).
+
+Features:
+* Automated Swiss system pairings and bye management.
+* Instant tie-break calculations.
+* Built-in two-sided chess clock synchronized with monotonic time.
+* Dark and light themes with English and Spanish language support.
+* Data export to TXT and CSV formats.
