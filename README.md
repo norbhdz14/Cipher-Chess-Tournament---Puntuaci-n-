@@ -41,13 +41,19 @@ Desarrollada bajo la filosofía de software libre y liviano, está construida en
 ### Descargar APK para Android
 Puedes descargar el paquete ejecutable `.apk` directamente desde la pestaña de **[Releases](https://github.com/Norbhdz14/cipher-chess-tournament/releases)** o desde los artefactos generados automáticamente en **GitHub Actions**.
 
-### Compilación desde Código Fuente
-Si deseas compilar la aplicación por tu cuenta utilizando Buildozer y Docker:
+​👤 Autor y Créditos
 
-```bash
-# 1. Clonar el repositorio
-git clone [https://github.com/Norbhdz14/cipher-chess-tournament.git](https://github.com/Norbhdz14/cipher-chess-tournament.git)
-cd cipher-chess-tournament
+​Desarrollado por Ing. Norberto Hernández
+​Cédula profesional: 15061201
+​Cipher · Sistemas Computacionales & IoT
+​Arandas, Jalisco, México.
+​📩 Telegram: t.me/CipherlosAltos
+​🌐 Blog: norbhdz.blogspot.com
+​🐙 GitHub: @Norbhdz14
 
-# 2. Compilar con la imagen oficial de Buildozer en Docker
-docker run --rm -v $(pwd):/home/user/hostcwd kivy/buildozer android debug
+​🤝 Apoya el Proyecto
+​Cipher Chess Tournament es una herramienta gratuita y de código abierto desarrollada para apoyar a la comunidad ajedrecista e impulsada por el entusiasmo al deporte ciencia. Si esta aplicación te ha sido de utilidad para organizar tus torneos o partidas, considera apoyar el desarrollo continuo: [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T4T629IUEU)
+
+​📄 Licencia
+
+​Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo LICENSE para obtener más información.
