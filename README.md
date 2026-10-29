@@ -1,5 +1,7 @@
 # ♟️ Cipher Chess Tournament
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T4T629IUEU)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Kivy](https://img.shields.io/badge/Kivy-UI-3776AB?logo=kivy&logoColor=white)](https://kivy.org/)
